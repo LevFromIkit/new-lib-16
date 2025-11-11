@@ -93,6 +93,36 @@
           }
         }
       }
+    },
+    "testi-lib": {
+      "projectType": "library",
+      "root": "projects/testi-lib",
+      "sourceRoot": "projects/testi-lib/src",
+      "prefix": "libiiiii",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/testi-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/testi-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/testi-lib/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   }
 }

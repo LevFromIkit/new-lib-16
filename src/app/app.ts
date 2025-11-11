@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TestiLib, Ppppppp } from 'testi-lib'
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, TestiLib, Ppppppp],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
